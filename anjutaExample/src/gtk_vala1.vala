@@ -1,0 +1,76 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*-  */
+/*
+ * main.c
+ * Copyright (C) 2015 MikeH <mikeh@XubuntuDellLat>
+ * 
+ * gtk-vala1 is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * gtk-vala1 is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+using GLib;
+using Gtk;
+
+public class Main : Object 
+{
+
+	/* 
+	 * Uncomment this line when you are done testing and building a tarball
+	 * or installing
+	 */
+	//const string UI_FILE = Config.PACKAGE_DATA_DIR + "/ui/" + "gtk_vala1.ui";
+	const string UI_FILE = "src/gtk_vala1.ui";
+
+	/* ANJUTA: Widgets declaration for gtk_vala1.ui - DO NOT REMOVE */
+
+
+	public Main ()
+	{
+	// mike testing here
+		int [] items ={1,3,5,7,6,4,2};	  // 26 July 2015
+		foreach ( int a in items ) { // 
+			stdout.printf ("value is %d \n",a );
+		}
+		try 
+		{
+			var builder = new Builder ();
+			builder.add_from_file (UI_FILE);
+			builder.connect_signals (this);
+
+			var window = builder.get_object ("window") as Window;
+			/* ANJUTA: Widgets initialization for gtk_vala1.ui - DO NOT REMOVE */
+			window.show_all ();
+		} 
+		catch (Error e) {
+			stderr.printf ("Could not load UI: %s\n", e.message);
+		} 
+
+	}
+
+	[CCode (instance_pos = -1)]
+	public void on_destroy (Widget window) 
+	{
+		Gtk.main_quit();
+	}
+
+	static int main (string[] args) 
+	{
+		Gtk.init (ref args);
+		var app = new Main ();  // never used var app
+		// 19 november 2015 - if above line commented out Window does not appear !
+
+		Gtk.main ();
+		
+		return 0;
+	}
+}
+
