@@ -28,6 +28,7 @@ class Demo.HelloWorld : GLib.Object {
     public static int main(string[] args) {
 //		string text1 = "A string literal";
 //		string text2 = "Able was I ere I saw Elba.";	
+	string mo = "Matrix Output";
 
 		
 //	int  [3,3] cube {{1,2,3},{1,2,3},{1,2,3}};	
@@ -73,7 +74,10 @@ int[,] d = {{2, 4, 6, 8},
 		}
 	}
 }
-			stdout.printf("matrix output    \n");	
+//			stdout.printf("matrix output    \n");	
+			stdout.printf(mo);
+			stdout.printf("\n");
+//			stdout.printf("matrix output    \n");
         for (int x=0; x<4; x++ ) {
         for (int y=0; y<4; y++ ) {
         for (int z=0; z<4; z++ ) {
