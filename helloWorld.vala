@@ -26,10 +26,10 @@
 class Demo.HelloWorld : GLib.Object {
 
     public static int main(string[] args) {
-		string text1 = "A string literal";
-		string text2 = "Able was I ere I saw Elba.";		
+	string text1 = "A string literal";
+	string text2 = "Able was I ere I saw Elba.";		
 	int[] b = { 2, 4, 6, 8 };
-		int[] cubeCoords = { 0,1,2,3 };
+	int[] cubeCoords = { 0,1,2,3 };
 /*	stdout.printf("Hello, World\n");
 	
 	stdout.printf(text1, "\n", text2);
@@ -38,7 +38,7 @@ class Demo.HelloWorld : GLib.Object {
 	stdout.printf("\n");
 */
 		     
-	     var r = /(foo|bar|cow)/;
+	var r = /(foo|bar|cow)/;
 	var o = r.replace ("this foo is great", -1, 0, "thing");
 //	stderr.printf ("%s\n", o);
 	     
