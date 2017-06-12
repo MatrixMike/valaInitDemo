@@ -1,0 +1,15 @@
+Mon 12 Jun 2017 15:13:49 AEST 
+note to self about running latest compiled version of valac:
+
+valac: error while loading shared libraries: libvala-0.38.so.0: cannot open shared object file: No such file or directory
+
+whereis libvala-0.38.so.0
+
+stackoverflow : suggests file is present in correct place need to 
+https://stackoverflow.com/questions/10519673/building-latest-vala-releases-make-check-fails-and-valac-cant-find-shared-lib
+
+I executed this sudo ldconfig /usr/local/lib
+and the valac compiler started to work...
+
+my aim is to work with lambdas in gtk
+
