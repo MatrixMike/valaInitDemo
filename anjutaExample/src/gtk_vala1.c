@@ -182,7 +182,7 @@ static gint main_main (gchar** args, int args_length1) {
 	app = _tmp0_;
 	gtk_main ();
 	result = 0;
-	_g_object_unref0 (app);
+	_g_object_unref0 (app);  // app is assigned but never used
 	return result;
 }
 
