@@ -49,6 +49,8 @@ public class Main : Object
 			builder.connect_signals (this);
 
 			var window = builder.get_object ("window") as Window;
+			window.set_default_size (200, 200);
+			window.title = "My Gtk.Application";
 			/* ANJUTA: Widgets initialization for gtk_vala1.ui - DO NOT REMOVE */
 			window.show_all ();
 		} 
