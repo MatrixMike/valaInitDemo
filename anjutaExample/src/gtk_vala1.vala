@@ -36,9 +36,11 @@ public class Main : Object
 	public Main ()
 	{
 	// mike testing here
+	// interesting to see how the vala code is transformed into c code - see 
+	// file of same name but .c extension in same folder
 		int [] items ={1,3,5,7,6,4,2};	  // 26 July 2015
 		foreach ( int a in items ) { // 
-			stdout.printf ("value is %d \n",a );
+			stdout.printf ("Value is %d \n",a );
 		}
 		try 
 		{
