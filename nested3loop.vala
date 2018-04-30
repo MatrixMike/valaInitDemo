@@ -22,7 +22,6 @@
  * 
  */
 
-
 class Demo.HelloWorld : GLib.Object {
 
     public static int main(string[] args) {
@@ -42,7 +41,7 @@ int[,] d = {{2, 4, 6, 8},
 	stdout.printf("\n");
 */
 		     
-	     var r = /(foo|bar|cow)/;
+	var r = /(foo|bar|cow)/;
 	var o = r.replace ("this foo is great", -1, 0, "thing");
 //	stderr.printf ("%s\n", o);
 	     
