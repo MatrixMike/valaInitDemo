@@ -27,7 +27,6 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
-
 #define TYPE_MAIN (main_get_type ())
 #define MAIN(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_MAIN, Main))
 #define MAIN_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), TYPE_MAIN, MainClass))
