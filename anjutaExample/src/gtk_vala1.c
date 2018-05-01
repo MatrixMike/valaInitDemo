@@ -118,6 +118,8 @@ Main* main_construct (GType object_type) {
 		GObject* _tmp5_ = NULL;
 		GtkWindow* _tmp6_ = NULL;
 		GtkWindow* _tmp7_ = NULL;
+		GtkWindow* _tmp8_ = NULL;
+		GtkWindow* _tmp9_ = NULL;
 		_tmp4_ = gtk_builder_new ();
 		builder = _tmp4_;
 		gtk_builder_add_from_file (builder, MAIN_UI_FILE, &_inner_error_);
@@ -130,7 +132,11 @@ Main* main_construct (GType object_type) {
 		_tmp6_ = _g_object_ref0 (G_TYPE_CHECK_INSTANCE_TYPE (_tmp5_, gtk_window_get_type ()) ? ((GtkWindow*) _tmp5_) : NULL);
 		window = _tmp6_;
 		_tmp7_ = window;
-		gtk_widget_show_all ((GtkWidget*) _tmp7_);
+		gtk_window_set_default_size (_tmp7_, 200, 200);
+		_tmp8_ = window;
+		gtk_window_set_title (_tmp8_, "My Gtk.Application");
+		_tmp9_ = window;
+		gtk_widget_show_all ((GtkWidget*) _tmp9_);
 		_g_object_unref0 (window);
 		_g_object_unref0 (builder);
 	}
@@ -138,15 +144,15 @@ Main* main_construct (GType object_type) {
 	__catch0_g_error:
 	{
 		GError* e = NULL;
-		FILE* _tmp8_ = NULL;
-		GError* _tmp9_ = NULL;
-		const gchar* _tmp10_ = NULL;
+		FILE* _tmp10_ = NULL;
+		GError* _tmp11_ = NULL;
+		const gchar* _tmp12_ = NULL;
 		e = _inner_error_;
 		_inner_error_ = NULL;
-		_tmp8_ = stderr;
-		_tmp9_ = e;
-		_tmp10_ = _tmp9_->message;
-		fprintf (_tmp8_, "Could not load UI: %s\n", _tmp10_);
+		_tmp10_ = stderr;
+		_tmp11_ = e;
+		_tmp12_ = _tmp11_->message;
+		fprintf (_tmp10_, "Could not load UI: %s\n", _tmp12_);
 		_g_error_free0 (e);
 	}
 	__finally0:
