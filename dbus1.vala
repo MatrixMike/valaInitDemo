@@ -29,3 +29,25 @@ public class DemoService : Object {
                       counter, message, sender);
     }
 }
+void on_bus_aquired (DBusConnection conn) {
+    try {
+        // start service and register it as dbus object
+        var service = new DemoService();
+        conn.register_object ("/org/example/demo", service);
+    } catch (IOError e) {
+        stderr.printf ("Could not register service: %s\n", e.message);
+    }
+}
+
+void main () {
+    // try to register service name in session bus
+    Bus.own_name (BusType.SESSION, "org.example.DemoService", /* name to register */
+                  BusNameOwnerFlags.NONE, /* flags */
+                  on_bus_aquired, /* callback function on registration succeeded */
+                  () => {}, /* callback on name register succeeded */
+                  () => stderr.printf ("Could not acquire name\n"));
+                                                     /* callback on name lost */
+
+    // start main loop
+    new MainLoop ().run ();
+}
