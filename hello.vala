@@ -10,3 +10,6 @@
 	return 1;
 	}
 	
+int method_name(int arg1, Object arg2) {
+    return 1;
+}
