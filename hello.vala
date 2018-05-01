@@ -6,12 +6,12 @@
 
 	int main(string[] args) {
 // bike gears 		
-	int[] front = {28,48,38 };				// deliberately unsorted
-	int[] rear  = {14, 17,21,24,28};		// these are integers 
+	float[] front = {28,48,38 };			// deliberately unsorted
+	float[] rear  = {14, 17,21,24,28};		// these are integers 
 											// trick into float by ...
 	stdout.printf("Hello,  %s\n", args.length > 1 ? args[1] : " World");
-		foreach (int f in front){
-			foreach (int r in rear){
+		foreach (float f in front){
+			foreach (float r in rear){
 			stdout.printf("ratio %f!\n", f/r);				
 			}
 		}
@@ -19,7 +19,9 @@
 	return 1;
 	}
 	
-int method_name(int arg1, Object arg2) {
+/*   block comment for tidy compile but not forgetting this code
+ int method_name(int arg1, Object arg2) {
     return 1;
 }
+*/
 
