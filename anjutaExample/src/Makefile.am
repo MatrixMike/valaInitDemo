@@ -6,6 +6,8 @@
 uidir = $(pkgdatadir)/ui
 ui_DATA = gtk_vala1.ui
 
+ACLOCAL_AMFLAGS = -I m4
+# above added by mjh
 
 AM_CPPFLAGS = \
 	-DPACKAGE_LOCALE_DIR=\""$(localedir)"\" \

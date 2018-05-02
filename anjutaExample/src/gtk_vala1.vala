@@ -22,7 +22,6 @@ using Gtk;
 
 public class Main : Object 
 {
-
 	/* 
 	 * Uncomment this line when you are done testing and building a tarball
 	 * or installing
