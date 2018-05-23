@@ -51,16 +51,12 @@ class Demo.HelloWorld : GLib.Object {
 //		stdout.printf("%d   %d \n", v, a*a);
 		}
 	}
-}
-     
-     
-     
- /*    
+}    
+/*    
 	foreach (int a in b[2:4]) {
 		stdout.printf("%d   %d \n", a, a*a);
-		}
-   
-   */
+		}  
+*/
         return 0;
     }
 }
