@@ -25,14 +25,16 @@ public static int main(string[] args)
 	for (int l = 1; l < 6; l++) {
 		stdout.printf("series result %5.2f\n", l*LiIonCell);
 //		LiIon[l] = l*LiIonCell;
+
 	}
 
 	
 	foreach (double v in  LiIon){
 		foreach (double r in regulators ) {
 			if ((v) >= (r+headroom) ) 
-			stdout.printf(" Use LiIon source %5.2f to produce Vreg %5.2f output\n", v,r );
+			stdout.printf("Use LiIon source %5.2f to produce Vreg %5.2f output\n", v,r );
 		}
+		stdout.printf("\n");
 	}		
 	return 0;
 }
