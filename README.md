@@ -6,3 +6,6 @@ building vala seemed to go well but executing the result needs some attention.
 However valac <filename.vala>   seems to work OK
 Checkout the anjutaExample  : builds and executes OK 
 
+see also https://en.wikipedia.org/wiki/Vala_(programming_language)
+
+
