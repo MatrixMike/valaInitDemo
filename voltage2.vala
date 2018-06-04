@@ -14,8 +14,13 @@ class Demo.HelloWorld : GLib.Object {
 public static int main(string[] args)
 {
 	const double headroom = 2.0;
+	const double LiIonCell = 3.7;
+	
 	double[] LiIon = {3.7, 7.4, 11.1, 14.8};
 	double[] regulators = {5.0, 6.0, 8.0, 9.0, 10.0, 12.0, 15.0, 18.0, 24.0};
+	for (int l = 1; l < 9; l++) {
+		stdout.printf("series result %5.2f\n", l*LiIonCell);
+	}
 	foreach (double v in  LiIon){
 		foreach (double r in regulators ) {
 			if ((v) >= (r+headroom) ) 
