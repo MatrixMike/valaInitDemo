@@ -1,0 +1,11 @@
+ Use LiIon source  7.40 to produce Vreg  5.00 output
+ Use LiIon source 11.10 to produce Vreg  5.00 output
+ Use LiIon source 11.10 to produce Vreg  6.00 output
+ Use LiIon source 11.10 to produce Vreg  8.00 output
+ Use LiIon source 11.10 to produce Vreg  9.00 output
+ Use LiIon source 14.80 to produce Vreg  5.00 output
+ Use LiIon source 14.80 to produce Vreg  6.00 output
+ Use LiIon source 14.80 to produce Vreg  8.00 output
+ Use LiIon source 14.80 to produce Vreg  9.00 output
+ Use LiIon source 14.80 to produce Vreg 10.00 output
+ Use LiIon source 14.80 to produce Vreg 12.00 output

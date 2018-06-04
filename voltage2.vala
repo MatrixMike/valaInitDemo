@@ -1,7 +1,8 @@
 /*
  * voltage2.vala
  * 
- * Copyright 2018 Mikeh <mikeh@mikeh-Dell-DM051>
+ * Author 2018 Mikeh 
+ * 04.06.2018 13:09:58
  * 
  * Nested for loops eventually lead you to a matrix (but)
  * many people have some difficulty interpreting a matrix so a sorted list
@@ -14,7 +15,7 @@ public static int main(string[] args)
 {
 	const double headroom = 2.0;
 	double[] LiIon = {3.7, 7.4, 11.1, 14.8};
-	double[] regulators = {5.0, 6.0, 8.0, 12.0};
+	double[] regulators = {5.0, 6.0, 8.0, 9.0, 10.0, 12.0, 15.0, 18.0, 24.0};
 	foreach (double v in  LiIon){
 		foreach (double r in regulators ) {
 			if ((v) >= (r+headroom) ) 
