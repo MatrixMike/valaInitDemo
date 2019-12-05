@@ -47,7 +47,8 @@ int[,] d = {{2, 4, 6, 8},
 	     
 //    for (int a = 0; a < 5; a++) { stdout.printf("%d\n", a); }  
 //     if ("ere" in text2)  stdout.printf("\nFound");
-			stdout.printf(" cube.all(BLACK);\n");
+		stdout.printf(" cube.all(BLACK);\n");
+		stdout.printf(" cube.all(GREEN);\n");
      	foreach (int z in cubeCoords ) {
       	foreach (int y in cubeCoords ) {    
      	foreach (int x in cubeCoords ) {
