@@ -1,4 +1,4 @@
-#include <Thread.create.h>
+//  #include <Thread.create.h>
 void* thread_func() {
     stdout.printf("Thread running.\n");
     return null;
